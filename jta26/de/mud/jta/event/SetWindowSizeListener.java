@@ -29,14 +29,15 @@ import de.mud.jta.PluginListener;
 import java.awt.Dimension;
 
 /**
- * This is the interface for a window size listener. 
+ * This is the interface for a window size listener.
  * <P>
  * <B>Maintainer:</B> Matthias L. Jugel
- *
+ * 
  * @version $Id: WindowSizeListener.java 499 2005-09-29 08:24:54Z leo $
  * @author Matthias L. Jugel, Marcus Mei�ner
  */
-public interface SetWindowSizeListener extends PluginListener {
-  /** Set the current window size of the terminal in rows and columns. */
-  public void setWindowSize(int columns, int rows);
+public interface SetWindowSizeListener extends PluginListener
+{
+    /** Set the current window size of the terminal in rows and columns. */
+    public void setWindowSize(int columns, int rows);
 }

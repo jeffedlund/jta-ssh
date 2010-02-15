@@ -29,15 +29,16 @@ import de.mud.jta.PluginListener;
 import javax.swing.JApplet;
 
 /**
- * This is the interface is for applet listeners, plugins that
- * want to know the applet object.
+ * This is the interface is for applet listeners, plugins that want to know the
+ * applet object.
  * <P>
  * <B>Maintainer:</B> Matthias L. Jugel
- *
+ * 
  * @version $Id: AppletListener.java 499 2005-09-29 08:24:54Z leo $
  * @author Matthias L. Jugel, Marcus Mei�ner
  */
-public interface AppletListener extends PluginListener {
-  /** Return the current window size of the terminal in rows and columns. */
-  public void setApplet(JApplet applet);
+public interface AppletListener extends PluginListener
+{
+    /** Return the current window size of the terminal in rows and columns. */
+    public void setApplet(JApplet applet);
 }

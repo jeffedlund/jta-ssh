@@ -34,25 +34,31 @@ import java.net.URL;
  * Play a sound.
  * <P>
  * <B>Maintainer:</B> Matthias L. Jugel
- *
+ * 
  * @version $Id: SoundRequest.java 499 2005-09-29 08:24:54Z leo $
  * @author Matthias L. Jugel, Marcus Mei�ner
  */
-public class SoundRequest implements PluginMessage {
-  protected URL audioClip;
+public class SoundRequest implements PluginMessage
+{
+    protected URL audioClip;
 
-  public SoundRequest(URL audioClip) {
-    this.audioClip = audioClip;
-  }
-
-  /**
-   * Notify all listeners that they may play the sound.
-   * @param pl the list of plugin message listeners
-   */
-  public Object firePluginMessage(PluginListener pl) {
-    if(pl instanceof SoundListener) {
-      ((SoundListener)pl).playSound(audioClip);
+    public SoundRequest(URL audioClip)
+    {
+	this.audioClip = audioClip;
     }
-    return null;
-  }
+
+    /**
+     * Notify all listeners that they may play the sound.
+     * 
+     * @param pl
+     *            the list of plugin message listeners
+     */
+    public Object firePluginMessage(PluginListener pl)
+    {
+	if (pl instanceof SoundListener)
+	{
+	    ((SoundListener) pl).playSound(audioClip);
+	}
+	return null;
+    }
 }

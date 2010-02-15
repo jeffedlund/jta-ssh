@@ -29,31 +29,36 @@ import de.mud.jta.PluginListener;
 import de.mud.jta.PluginConfig;
 import de.mud.jta.event.ConfigurationListener;
 
-
 /**
- * Configuration request message. Subclassing this message can be used to
- * make the configuration more specific and efficient.
+ * Configuration request message. Subclassing this message can be used to make
+ * the configuration more specific and efficient.
  * <P>
  * <B>Maintainer:</B> Matthias L. Jugel
- *
+ * 
  * @version $Id: ConfigurationRequest.java 499 2005-09-29 08:24:54Z leo $
  * @author Matthias L. Jugel, Marcus Mei�ner
  */
-public class ConfigurationRequest implements PluginMessage {
-  PluginConfig config;
+public class ConfigurationRequest implements PluginMessage
+{
+    PluginConfig config;
 
-  public ConfigurationRequest(PluginConfig config) {
-    this.config = config;
-  }
-
-  /**
-   * Notify all listeners of a configuration event.
-   * @param pl the list of plugin message listeners
-   */
-  public Object firePluginMessage(PluginListener pl) {
-    if(pl instanceof ConfigurationListener) {
-      ((ConfigurationListener)pl).setConfiguration(config);
+    public ConfigurationRequest(PluginConfig config)
+    {
+	this.config = config;
     }
-    return null;
-  }
+
+    /**
+     * Notify all listeners of a configuration event.
+     * 
+     * @param pl
+     *            the list of plugin message listeners
+     */
+    public Object firePluginMessage(PluginListener pl)
+    {
+	if (pl instanceof ConfigurationListener)
+	{
+	    ((ConfigurationListener) pl).setConfiguration(config);
+	}
+	return null;
+    }
 }

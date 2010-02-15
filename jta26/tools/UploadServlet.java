@@ -33,18 +33,18 @@ import java.util.Enumeration;
 
 /**
  * Example UploadServlet for usage with the Capture plugin.
- *
+ * 
  * @author Matthias L. Jugel
  * @version $Id: UploadServlet.java 499 2005-09-29 08:24:54Z leo $
  */
-public class UploadServlet extends HttpServlet {
+public class UploadServlet extends HttpServlet
+{
 
-
-  /**
-   * Accept POST requests only.
-   * Retrieve the data from text/x-www-urlencoded request.
-   */
-  public void doPost(HttpServletRequest req, HttpServletResponse res)
+    /**
+     * Accept POST requests only. Retrieve the data from text/x-www-urlencoded
+     * request.
+     */
+    public void doPost(HttpServletRequest req, HttpServletResponse res)
           throws ServletException, IOException {
 
 
