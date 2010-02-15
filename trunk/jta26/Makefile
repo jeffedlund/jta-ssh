@@ -32,9 +32,9 @@ JAVAH 	=	javah
 #JAVADOC	=	/q/opt/jdk1.2.2/bin/javadoc
 #DEBUG	=	-g -deprecation
 DEBUG	=	-g
-JFLAGS	=	-classpath $(CLASSPATH):jar/org.apache.crimson.jar:jar/jdom.jar:jar/gnu-regexp-1.0.8.jar:.
+JFLAGS	=	-classpath $(CLASSPATH):jar/org.apache.crimson.jar:jar/jdom.jar:jar/gnu-regexp-1.1.4.jar:.
 SRCDIR	=	de
-PKGNAME	=	jta20
+PKGNAME	=	jta-26
 VERSION	=	`java -version 2>&1 | head -1 | \
 		 sed 's/^java version //' | sed 's/"//g'`
 DATE	=	`date +%Y%m%d-%H%M`
@@ -81,6 +81,7 @@ jar:	app build
 	  "Created-$(DATE)" README \
 	  license/COPYING \
 	  `find $(SRCDIR) -name \*.class` \
+	  `find $(SRCDIR) -name \*.properties` \
 	  `find $(SRCDIR) -name \*.conf` > /dev/null
 	@rm -f Created-*
 	@echo Created jar/$(PKGNAME).jar

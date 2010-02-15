@@ -30,20 +30,25 @@ import java.awt.datatransfer.Clipboard;
  * A visual plugin that also allows to copy and paste data.
  * <P>
  * <B>Maintainer:</B> Matthias L. Jugel
- *
+ * 
  * @version $Id: VisualTransferPlugin.java 499 2005-09-29 08:24:54Z leo $
  * @author Matthias L. Jugel, Marcus Mei�ner
  */
-public interface VisualTransferPlugin extends VisualPlugin {
-  /**
-   * Copy currently selected text into the clipboard.
-   * @param clipboard the clipboard
-   */
-  public void copy(Clipboard clipboard);
+public interface VisualTransferPlugin extends VisualPlugin
+{
+    /**
+     * Copy currently selected text into the clipboard.
+     * 
+     * @param clipboard
+     *            the clipboard
+     */
+    public void copy(Clipboard clipboard);
 
-  /**
-   * Paste text from clipboard to the plugin.
-   * @param clipboard the clipboard
-   */
-  public void paste(Clipboard clipboard);
+    /**
+     * Paste text from clipboard to the plugin.
+     * 
+     * @param clipboard
+     *            the clipboard
+     */
+    public void paste(Clipboard clipboard);
 }

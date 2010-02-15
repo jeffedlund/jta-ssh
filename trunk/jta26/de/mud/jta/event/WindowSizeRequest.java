@@ -32,20 +32,26 @@ import de.mud.jta.event.WindowSizeListener;
  * Request the current window size of the terminal.
  * <P>
  * <B>Maintainer:</B> Matthias L. Jugel
- *
+ * 
  * @version $Id: WindowSizeRequest.java 499 2005-09-29 08:24:54Z leo $
  * @author Matthias L. Jugel, Marcus Mei�ner
  */
-public class WindowSizeRequest implements PluginMessage {
-  /**
-   * Return the size of the window
-   * @param pl the list of plugin message listeners
-   */
-  public Object firePluginMessage(PluginListener pl) {
-    if(pl instanceof WindowSizeListener) {
-      Object ret = ((WindowSizeListener)pl).getWindowSize();
-      if(ret != null) return ret;
+public class WindowSizeRequest implements PluginMessage
+{
+    /**
+     * Return the size of the window
+     * 
+     * @param pl
+     *            the list of plugin message listeners
+     */
+    public Object firePluginMessage(PluginListener pl)
+    {
+	if (pl instanceof WindowSizeListener)
+	{
+	    Object ret = ((WindowSizeListener) pl).getWindowSize();
+	    if (ret != null)
+		return ret;
+	}
+	return null;
     }
-    return null;
-  }
 }

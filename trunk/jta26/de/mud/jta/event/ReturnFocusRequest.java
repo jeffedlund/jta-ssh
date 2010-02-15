@@ -35,21 +35,27 @@ import de.mud.jta.event.ReturnFocusListener;
  * Implemented after a suggestion by Dave &lt;david@mirrabooka.com&gt;
  * <P>
  * <B>Maintainer:</B> Matthias L. Jugel
- *
+ * 
  * @author Matthias L. Jugel, Marcus Mei�ner
  */
-public class ReturnFocusRequest implements PluginMessage {
-  /** Create a new return focus request.*/
-  public ReturnFocusRequest() { }
+public class ReturnFocusRequest implements PluginMessage
+{
+    /** Create a new return focus request. */
+    public ReturnFocusRequest()
+    {
+    }
 
-  /**
-   * Notify all listeners about return focus message.
-   * @param pl the list of plugin message listeners
-   * @return always null
-   */
-  public Object firePluginMessage(PluginListener pl) {
-    if(pl instanceof ReturnFocusListener)
-      ((ReturnFocusListener)pl).returnFocus();
-    return null;
-  }
+    /**
+     * Notify all listeners about return focus message.
+     * 
+     * @param pl
+     *            the list of plugin message listeners
+     * @return always null
+     */
+    public Object firePluginMessage(PluginListener pl)
+    {
+	if (pl instanceof ReturnFocusListener)
+	    ((ReturnFocusListener) pl).returnFocus();
+	return null;
+    }
 }

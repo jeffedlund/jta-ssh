@@ -33,13 +33,15 @@ import java.awt.Dimension;
  * This is the interface for a focus status listener.
  * <P>
  * <B>Maintainer:</B> Matthias L. Jugel
- *
+ * 
  * @version $Id: FocusStatusListener.java 499 2005-09-29 08:24:54Z leo $
  * @author Matthias L. Jugel, Marcus Mei�ner
  */
-public interface FocusStatusListener extends PluginListener {
-  /** Called if a plugin gained the input focus. */
-  public void pluginGainedFocus(Plugin plugin);
-  /** Called if a plugin lost the input focus. */
-  public void pluginLostFocus(Plugin plugin);
+public interface FocusStatusListener extends PluginListener
+{
+    /** Called if a plugin gained the input focus. */
+    public void pluginGainedFocus(Plugin plugin);
+
+    /** Called if a plugin lost the input focus. */
+    public void pluginLostFocus(Plugin plugin);
 }

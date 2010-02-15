@@ -28,19 +28,26 @@ package de.mud.ssh;
  * @author Marcus Meissner
  * @version $Id: NONE.java 499 2005-09-29 08:24:54Z leo $
  */
-public final class NONE extends Cipher {
+public final class NONE extends Cipher
+{
 
-  public void setKey(String skey) {
-  }
+    public void setKey(String skey)
+    {
+    }
 
-  public void setKey(byte[] key) {
-  }
+    public void setKey(byte[] key)
+    {
+    }
 
-  public synchronized void encrypt(byte[] src, int srcOff, byte[] dest, int destOff, int len) {
-    System.arraycopy(src,srcOff,dest,destOff,len);
-  }
+    public synchronized void encrypt(byte[] src, int srcOff, byte[] dest,
+	    int destOff, int len)
+    {
+	System.arraycopy(src, srcOff, dest, destOff, len);
+    }
 
-  public synchronized void decrypt(byte[] src, int srcOff, byte[] dest, int destOff, int len) {
-    System.arraycopy(src,srcOff,dest,destOff,len);
-  }
+    public synchronized void decrypt(byte[] src, int srcOff, byte[] dest,
+	    int destOff, int len)
+    {
+	System.arraycopy(src, srcOff, dest, destOff, len);
+    }
 }

@@ -4,7 +4,7 @@ JAVA	=	java
 JAR	=	jar
 JAVAC	=	javac
 DEBUG	=	-g -deprecation
-JFLAGS	=	-classpath $(CLASSPATH):../jar/gnu-regexp-1.0.8.jar:.:../
+JFLAGS	=	-classpath $(CLASSPATH):../jar/gnu-regexp-1.1.4.jar:.:../
 
 .SUFFIXES:	.java .class
 
