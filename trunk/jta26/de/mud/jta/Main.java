@@ -89,7 +89,7 @@ public class Main
     private static Clipboard clipboard;
 
     private static String host, port;
-    private static final ResourceManager rm = ResourceManager.getInstance();
+    private static ResourceManager rm; 
     public static void main(String args[])
     {
 	
@@ -113,7 +113,9 @@ public class Main
 		    + "[-term id] [host [port]]");
 	    System.exit(0);
 	}
-
+	String locale = System.getProperty("System.locale");
+	rm = ResourceManager.getInstance(locale);
+	
 	String cfg = options.getProperty("Main.config");
 	if (cfg != null)
 	{
