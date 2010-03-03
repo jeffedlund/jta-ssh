@@ -193,18 +193,18 @@ public class Terminal extends Plugin implements FilterPlugin,
 	terminal = new SwingTerminal(emulation);
 
 	// initialize colors
-	colors.put("black", Color.black);
-	colors.put("red", Color.red);
-	colors.put("green", Color.green);
-	colors.put("yellow", Color.yellow);
-	colors.put("blue", Color.blue);
-	colors.put("magenta", Color.magenta);
-	colors.put("orange", Color.orange);
-	colors.put("pink", Color.pink);
-	colors.put("cyan", Color.cyan);
-	colors.put("white", Color.white);
-	colors.put("gray", Color.gray);
-	colors.put("darkgray", Color.darkGray);
+	colors.put(rm.getString("jta.color.black"), Color.black);
+	colors.put(rm.getString("jta.color.red"), Color.red);
+	colors.put(rm.getString("jta.color.green"), Color.green);
+	colors.put(rm.getString("jta.color.yellow"), Color.yellow);
+	colors.put(rm.getString("jta.color.blue"), Color.blue);
+	colors.put(rm.getString("jta.color.magenta"), Color.magenta);
+	colors.put(rm.getString("jta.color.orange"), Color.orange);
+	colors.put(rm.getString("jta.color.pink"), Color.pink);
+	colors.put(rm.getString("jta.color.cyan"), Color.cyan);
+	colors.put(rm.getString("jta.color.white"), Color.white);
+	colors.put(rm.getString("jta.color.gray"), Color.gray);
+	colors.put(rm.getString("jta.color.darkgray"), Color.darkGray);
 
 	if (!personalJava)
 	{
@@ -717,10 +717,14 @@ public class Terminal extends Plugin implements FilterPlugin,
 		    System.err.println("Terminal: \""
 			    + (new String(b, 0, n, encoding)) + "\"");
 		if (n > 0)
+		{
 		    emulation.putString(new String(b, 0, n, encoding));
+		    tPanel.repaint();
+		}
 		else
+		{
 		    Thread.sleep(500);
-		tPanel.repaint();
+		}
 	    }
 	    catch (IOException e)
 	    {
