@@ -723,7 +723,7 @@ public class Terminal extends Plugin implements FilterPlugin,
 		}
 		else
 		{
-		    Thread.sleep(500);
+		    Thread.sleep(100);
 		}
 	    }
 	    catch (IOException e)
